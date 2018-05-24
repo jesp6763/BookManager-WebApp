@@ -1,0 +1,55 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+aside{
+    background-color: #c72727;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    overflow-x: hidden;
+}
+
+nav > li{
+    list-style: none;
+}
+
+main{
+    padding: 10px;
+}
+
+main > h1{
+    margin-bottom: 10px;
+}
+
+#sideMenuWrapper header{
+    padding: 10px;
+}
+
+#sideMenuWrapper header h1{
+    font-size: 2.0em;
+    color: white;
+}
+
+#sideMenuWrapper button{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #c72727;
+    border: 0px;
+    color: white;
+}
+
+#sideMenuWrapper button:hover, nav .active{
+    background-color: rgb(70, 70, 70);
+}
+
+main{
+    margin-left: 260px;
+}

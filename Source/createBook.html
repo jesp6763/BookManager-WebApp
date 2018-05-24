@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Book Manager</title>
+    <link rel="stylesheet" type="text/css" href="css/shared-style.css">
+    <link rel="stylesheet" type="text/css" href="css/updateBook-style.css">
     <script src="Controller/initialize.js"></script>
     <script src="Model/Book.js"></script>
     <script src="View/createBook.js"></script>
@@ -13,13 +15,43 @@
     </script>
 </head>
 <body>
-    <h1>Public Library: Create a new book record</h1>
-    <form id="book">
-        <p><label>ISBN: <input name="isbn" /></label></p>
-        <p><label>Title: <input name="title" /></label></p>
-        <p><label>Year: <input name="year" /></label></p>
-        <p><button type="button" name="commit">Save</button></p>
-    </form>
-    <nav><a href="index.html" onclick="Book.SaveAll()">Back to main menu</a></nav>
+    <aside>
+        <div id="sideMenuWrapper">
+            <header>
+                <h1>Book Manager</h1>
+            </header>
+            <nav>
+                <li><a href="listBooks.html"><button class="active" type="button" onclick="Book.SaveAll()">List all books</button></a></li>
+                <li><a href="createBook.html"><button type="button" onclick="Book.SaveAll()">Add a new book</button></a></li>
+                <li><a href="updateBook.html"><button type="button" onclick="Book.SaveAll()">Update a book</button></a></li>
+                <li><a href="deleteBook.html"><button type="button" onclick="Book.SaveAll()">Delete a book</button></a></li>
+                <li><button type="button" onclick="Book.ClearData()">Clear database</button></li>
+                <li><button type="button" onclick="Book.CreateTestData()">Create test data</button></li>
+            </nav>
+        </div>
+    </aside>
+    
+    <main>
+        <h1>Create a book</h1>
+        <form id="book">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label>ISBN:</label></td>
+                            <td><input name="isbn" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Title:</label></td>
+                            <td><input name="title" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Year:</label></td>
+                            <td><input name="year" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><button type="button" name="commit">Create</button></p>
+            </form>
+    </main>
 </body>
 </html>

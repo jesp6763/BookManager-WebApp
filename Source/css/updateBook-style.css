@@ -1,0 +1,39 @@
+#book input, #book select{
+    background-color: #d8d8d8;
+    border: 0px;
+    color: rgb(68, 68, 68);
+}
+
+#book > table tbody > tr > td:nth-child(1){
+    padding-right: 10px;
+}
+
+#book > table tbody > tr > td input{
+    padding: 5px;
+}
+
+#book > table tbody > tr > td input, #book > table tbody > tr > td select{
+    font-size: 1.02em;
+}
+
+#book > table tbody > tr > td input:read-only{
+    background-color: rgb(240, 240, 240);
+    cursor: default;
+}
+
+#book select{
+    width: 100%;
+}
+
+#book button{
+    margin-top: 10px;
+    background-color: #3dcf30;
+    color: white;
+    border: 0px;
+    padding: 10px; 
+    min-width: 100px;
+}
+
+#book button:hover{
+    background-color: #2edb1e;
+}
