@@ -10,27 +10,12 @@
     <script src="Controller/initialize.js"></script>
     <script src="Model/Book.js"></script>
     <script src="View/listBooks.js"></script>
+    <script src="js/setupCommonTemplates.js"></script>
     <script>
     window.addEventListener( "load", publicLibrary.view.listBooks.SetupUserInterface );
     </script>
 </head>
 <body>
-    <aside>
-        <div id="sideMenuWrapper">
-            <header>
-                <h1>Book Manager</h1>
-            </header>
-            <nav>
-                <li><a href="listBooks.html"><button class="active" type="button">List all books</button></a></li>
-                <li><a href="createBook.html"><button type="button">Add a new book</button></a></li>
-                <li><a href="updateBook.html"><button type="button">Update a book</button></a></li>
-                <li><a href="deleteBook.html"><button type="button">Delete a book</button></a></li>
-                <li><button type="button" onclick="Book.ClearData()">Clear database</button></li>
-                <li><button type="button" onclick="Book.CreateTestData()">Create test data</button></li>
-            </nav>
-        </div>
-    </aside>
-
     <main>
         <h1>Books</h1>
         <table id="books">

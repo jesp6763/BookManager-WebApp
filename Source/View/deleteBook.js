@@ -30,7 +30,6 @@ publicLibrary.view.deleteBook =
         {
             Book.Destroy(isbn);
             selectElement.remove(selectElement.selectedIndex);
-            console.log("Successfully deleted.");
         }
     }
 };

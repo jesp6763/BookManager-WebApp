@@ -48,7 +48,9 @@ Book.LoadAll = function()
     }
 };
 
-// Saves all books to local storage.
+/**
+ * Saves all books to local storage.
+ */
 Book.SaveAll = function()
 {
     let bookTableJSONString = "";

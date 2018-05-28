@@ -1,0 +1,3 @@
+#book > .flex-vertical > .flex-horizontal:nth-child(1) label{
+    width: 150px;
+}

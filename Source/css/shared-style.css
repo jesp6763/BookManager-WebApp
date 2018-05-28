@@ -15,6 +15,11 @@ aside{
     overflow-x: hidden;
 }
 
+h1 > a{
+    color: white;
+    text-decoration: none;
+}
+
 nav > li{
     list-style: none;
 }
@@ -52,4 +57,16 @@ main > h1{
 
 main{
     margin-left: 260px;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-horizontal{
+    flex-direction: row;
+}
+
+.flex-vertical{
+    flex-direction: column;
 }

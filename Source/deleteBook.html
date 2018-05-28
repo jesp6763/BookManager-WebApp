@@ -7,46 +7,29 @@
     <title>Book Manager</title>
     <link rel="stylesheet" type="text/css" href="css/shared-style.css">
     <link rel="stylesheet" type="text/css" href="css/updateBook-style.css">
+    <link rel="stylesheet" type="text/css" href="css/deleteBook-style.css">
     <script src="Controller/initialize.js"></script>
     <script src="Model/Book.js"></script>
     <script src="View/deleteBook.js"></script>
+    <script src="js/setupCommonTemplates.js"></script>
     <script>
     window.addEventListener( "load", publicLibrary.view.deleteBook.SetupUserInterface );
     </script>
 </head>
 <body>
-    <aside>
-        <div id="sideMenuWrapper">
-            <header>
-                <h1>Book Manager</h1>
-            </header>
-            <nav>
-                <li><a href="listBooks.html"><button class="active" type="button" onclick="Book.SaveAll()">List all books</button></a></li>
-                <li><a href="createBook.html"><button type="button" onclick="Book.SaveAll()">Add a new book</button></a></li>
-                <li><a href="updateBook.html"><button type="button" onclick="Book.SaveAll()">Update a book</button></a></li>
-                <li><a href="deleteBook.html"><button type="button" onclick="Book.SaveAll()">Delete a book</button></a></li>
-                <li><button type="button" onclick="Book.ClearData()">Clear database</button></li>
-                <li><button type="button" onclick="Book.CreateTestData()">Create test data</button></li>
-            </nav>
-        </div>
-    </aside>
-
     <main>
         <h1>Delete a book</h1>
         <form id="book">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><label>Select book:</label></td>
-                            <td>
-                                <select name="selectBook">
-                                    <option> --- </option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p><button type="button" name="commit">Delete</button></p>
+            <div class="flex flex-vertical">
+                <div class="flex flex-horizontal">
+                    <label>Select book:</label>
+                    <select name="selectBook">
+                        <option> --- </option>
+                    </select>
+                </div>
+            </div>
+            
+            <p><button type="button" name="commit">Delete</button></p>
             </form>
     </main>
 </body>

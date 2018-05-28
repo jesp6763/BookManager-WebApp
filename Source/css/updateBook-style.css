@@ -2,27 +2,8 @@
     background-color: #d8d8d8;
     border: 0px;
     color: rgb(68, 68, 68);
-}
-
-#book > table tbody > tr > td:nth-child(1){
-    padding-right: 10px;
-}
-
-#book > table tbody > tr > td input{
-    padding: 5px;
-}
-
-#book > table tbody > tr > td input, #book > table tbody > tr > td select{
-    font-size: 1.02em;
-}
-
-#book > table tbody > tr > td input:read-only{
-    background-color: rgb(240, 240, 240);
-    cursor: default;
-}
-
-#book select{
     width: 100%;
+    padding: 5px;
 }
 
 #book button{
@@ -36,4 +17,25 @@
 
 #book button:hover{
     background-color: #2edb1e;
+}
+
+#book{
+    width: 350px;
+}
+
+#book > .flex-vertical > .flex-horizontal label{
+    width: 150px;
+}
+
+#book > .flex-vertical > .flex-horizontal:nth-child(1) label{
+    width: 145px;
+}
+
+#book > .flex-vertical > .flex-horizontal input:read-only{
+    background-color: rgb(240, 240, 240);
+    cursor: default;
+}
+
+#book > .flex-vertical > .flex-horizontal{
+    margin-bottom: 2px;
 }
