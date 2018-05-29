@@ -120,7 +120,9 @@ Book.Destroy = function(isbn)
 };
 
 /* Database */
-// Creates some books for testing..
+/**
+ *  Creates some books for testing.
+ */
 Book.CreateTestData = function()
 {
     Book.LoadAll();
