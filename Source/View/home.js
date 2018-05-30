@@ -1,4 +1,4 @@
-publicLibrary.view.listBooks =
+publicLibrary.view.home =
 {
     SetupUserInterface: function()
     {
@@ -23,6 +23,7 @@ publicLibrary.view.listBooks =
             row.insertCell(-1).textContent = bookInstance.isbn;
             row.insertCell(-1).textContent = bookInstance.title;
             row.insertCell(-1).textContent = bookInstance.year;
+            row.insertCell(-1).innerHTML = '<button type="button" class="btn btn-blue">Edit</button>' + '<button type="button" onclick="Book.Destroy(\'' + bookInstance.isbn + '\')" class="btn btn-red">Delete</button>';
         }
     }
 };

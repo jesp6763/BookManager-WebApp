@@ -70,3 +70,53 @@ main{
 .flex-vertical{
     flex-direction: column;
 }
+
+.btn{
+    border: 0px;
+    padding: 5px;
+}
+
+.btn-red{
+    background-color: #eb2323;
+    color: white;
+}
+
+.btn-red:hover{
+    background-color: #f84e4e;
+}
+
+.btn-blue{
+    background-color: #238aeb;
+    color: white;
+}
+
+.btn-blue:hover{
+    background-color: #60acf3;
+}
+
+.btn-green{
+    background-color: rgb(62, 230, 20);
+    color: white;
+}
+
+.btn-green:hover{
+    background-color: rgb(100, 224, 68);
+    color: white;
+}
+
+.modal{
+    background-color: rgb(236, 236, 236);
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    width: 600px;
+    height: 300px;
+}
+
+.modal-header{
+    color: white;
+    padding: 10px;
+    background-color: rgb(41, 41, 41);
+}

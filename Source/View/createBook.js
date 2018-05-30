@@ -14,6 +14,6 @@ publicLibrary.view.createBook =
         let formElement = document.forms['book'];
         let slots = { isbn: formElement.isbn.value, title: formElement.title.value, year: formElement.year.value };
         Book.Add(slots);
-        formElement.reset();
+        ShowModal(false);
     }
 };

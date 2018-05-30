@@ -105,9 +105,13 @@ Book.Update = function(slots)
     console.log("Book " + slots.isbn + " modified!");
 };
 
-// Removes a book with specified ISBN.
+/**
+ * Removes a book with specified ISBN.
+ * @param {string} isbn 
+ */
 Book.Destroy = function(isbn)
 {
+    console.log(isbn);
     if(Book.instances[isbn])
     {
         delete Book.instances[isbn];
@@ -125,12 +129,11 @@ Book.Destroy = function(isbn)
  */
 Book.CreateTestData = function()
 {
-    Book.LoadAll();
-    
-    let book1Record = {isbn: "006251587X", title: "The Queen of Pluto", year: 1940};
-    let book2Record = {isbn: "0465026567", title: "The King of Pluto", year: 1942};
-    let book3Record = {isbn: "0465030793", title: "The End of Pluto", year: 1970};
+    let book1Record = {isbn: "006251587X", title: "The Queen of Pluto", year: 1940},
+    book2Record = {isbn: "0465026567", title: "The King of Pluto", year: 1942},
+    book3Record = {isbn: "0465030793", title: "The End of Pluto", year: 1970};
 
+    Book.LoadAll();
     Book.instances[book1Record.isbn] = new Book(book1Record);
     Book.instances[book2Record.isbn] = new Book(book2Record);
     Book.instances[book3Record.isbn] = new Book(book3Record);
@@ -138,8 +141,10 @@ Book.CreateTestData = function()
     Book.SaveAll();
 };
 
-// Wipes the local storage for books.
-// A confirm box will pop up.
+/**
+ * Wipes the local storage for books.
+ * A confirm box will pop up.
+ */
 Book.ClearData = function()
 {
     if(confirm("Do you really want to delete all book data?"))

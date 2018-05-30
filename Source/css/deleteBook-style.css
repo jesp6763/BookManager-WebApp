@@ -1,7 +1,0 @@
-#book > .flex-vertical > .flex-horizontal label{
-    width: 150px;
-}
-
-#book > .flex-vertical > .flex-horizontal select{
-    padding: 5px;
-}

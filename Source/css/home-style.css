@@ -1,0 +1,91 @@
+#books{
+    background-color: #e8e8e8;
+    width: 100%;
+    text-align: center;
+}
+
+main > table > tbody tr{
+    background-color: white;
+}
+
+main > table > tbody tr:nth-child(2n+2){
+    background-color: #f6f6f6;
+}
+
+tbody > tr > td:nth-child(4){
+    min-width: 110px;
+    width: 130px;
+}
+
+tbody > tr > td > button{
+    margin-right: 5px;
+}
+
+header > button {
+    margin-left: auto;
+}
+
+main > header > h1{
+    margin-bottom: 0px;
+}
+
+main > header{
+    margin-bottom: 10px;
+}
+
+.modal{
+    height: 205px;
+    top: calc(50% - (205px / 2));
+}
+
+#book > .flex-vertical > .flex-horizontal:nth-child(1) label{
+    width: 150px;
+}
+
+#book > button{
+    float: right;
+}
+
+#book input, #book select{
+    background-color: #d8d8d8;
+    border: 0px;
+    color: rgb(68, 68, 68);
+    width: 100%;
+    padding: 5px;
+}
+
+#book button{
+    margin-top: 10px;
+    background-color: #3dcf30;
+    color: white;
+    border: 0px;
+    padding: 10px; 
+    min-width: 100px;
+}
+
+#book button:hover{
+    background-color: #2edb1e;
+}
+
+#book{
+    width: 350px;
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+#book > .flex-vertical > .flex-horizontal label{
+    width: 150px;
+}
+
+#book > .flex-vertical > .flex-horizontal:nth-child(1) label{
+    width: 145px;
+}
+
+#book > .flex-vertical > .flex-horizontal input:read-only{
+    background-color: rgb(240, 240, 240);
+    cursor: default;
+}
+
+#book > .flex-vertical > .flex-horizontal{
+    margin-bottom: 2px;
+}
