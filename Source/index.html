@@ -61,7 +61,67 @@
         </form>
     </div>
 
+    <div class="modal">
+        <div class="modal-header">
+            <h1>Edit book</h1>
+        </div>
+
+        <form id="book">
+            <div class="flex flex-vertical">
+                <div class="flex flex-horizontal">
+                    <label>ISBN:</label>
+                    <input readonly="read-only" name="isbn" />
+                </div>
+                <div class="flex flex-horizontal">
+                    <label>Title:</label>
+                    <input name="title" />
+                </div>
+                <div class="flex flex-horizontal">
+                    <label>Year:</label>
+                    <input name="year" type="number" />
+                </div>
+            </div>
+            
+            <button type="button" name="modalclose">Cancel</button>
+            <button type="button" name="modalok">Save changes</button>
+        </form>
+    </div>
+
     <script type="text/javascript">
+        // 'Edit book' modal
+        let editBookModal = document.getElementsByClassName("modal")[1];
+        let editBookModalForm = editBookModal.getElementsByTagName('form')[0];
+        editBookModal.style.display = "none";
+
+        let editBtn = editBookModalForm.modalok;
+        let closeButton = editBookModalForm.modalclose;
+
+        Book.LoadAll();
+        editBtn.addEventListener("click", function(){
+            let formElement = editBookModalForm;
+            let slots = { isbn: formElement.isbn.value, title: formElement.title.value, year: formElement.year.value };
+            Book.Update(slots);
+            ShowEditModal(false);
+        });
+
+        closeButton.addEventListener("click", function(){
+            ShowEditModal(false);
+        });
+
+        function ShowEditModal(show, bookISBN){
+            editBookModal.style.display = show ? "block" : "none";
+            if(bookISBN)
+            {
+                let book = Book.instances[bookISBN];
+                
+                let formElement = editBookModal.getElementsByTagName('form')[0], saveButton = formElement.modalok;
+                formElement.isbn.value = book.isbn;
+                formElement.title.value = book.title;
+                formElement.year.value = book.year;
+            }
+        }
+
+        // 'Add new book' modal
         let addNewModal = document.getElementsByClassName("modal")[0];
         let addNewModalForm = addNewModal.getElementsByTagName('form')[0];
         addNewModal.style.display = "none";

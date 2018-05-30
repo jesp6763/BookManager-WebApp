@@ -111,7 +111,6 @@ Book.Update = function(slots)
  */
 Book.Destroy = function(isbn)
 {
-    console.log(isbn);
     if(Book.instances[isbn])
     {
         delete Book.instances[isbn];
@@ -149,6 +148,6 @@ Book.ClearData = function()
 {
     if(confirm("Do you really want to delete all book data?"))
     {
-        localStorage["bookTable"] = "{}";
+        delete localStorage["bookTable"];
     }
 };

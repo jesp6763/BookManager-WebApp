@@ -46,7 +46,7 @@ main > header{
     float: right;
 }
 
-#book input, #book select{
+#book input, #book select, .bookInput{
     background-color: #d8d8d8;
     border: 0px;
     color: rgb(68, 68, 68);
@@ -81,11 +81,16 @@ main > header{
     width: 145px;
 }
 
-#book > .flex-vertical > .flex-horizontal input:read-only{
+#book > .flex-vertical > .flex-horizontal input:read-only, .bookInput:read-only{
     background-color: rgb(240, 240, 240);
     cursor: default;
 }
 
 #book > .flex-vertical > .flex-horizontal{
     margin-bottom: 2px;
+}
+
+.bookInput{
+    text-align: center;
+    width: 300px;
 }

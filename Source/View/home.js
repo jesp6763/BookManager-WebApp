@@ -22,8 +22,13 @@ publicLibrary.view.home =
             row = tableBodyElement.insertRow();
             row.insertCell(-1).textContent = bookInstance.isbn;
             row.insertCell(-1).textContent = bookInstance.title;
-            row.insertCell(-1).textContent = bookInstance.year;
-            row.insertCell(-1).innerHTML = '<button type="button" class="btn btn-blue">Edit</button>' + '<button type="button" onclick="Book.Destroy(\'' + bookInstance.isbn + '\')" class="btn btn-red">Delete</button>';
+            row.insertCell(-1).innerHTML = bookInstance.year;
+            row.insertCell(-1).innerHTML = '<button type="button" onclick="ShowEditModal(true, \'' + bookInstance.isbn + '\')" class="btn btn-blue">Edit</button>' + '<button type="button" onclick="Book.Destroy(\'' + bookInstance.isbn + '\'); HandleDeleteButton(\'' + bookInstance.isbn + '\')" class="btn btn-red">Delete</button>';
         }
+    },
+
+    HandleDeleteButton: function(isbn)
+    {
+        // Remove table row
     }
 };
