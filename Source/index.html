@@ -11,6 +11,7 @@
     <script src="Controller/initialize.js"></script>
     <script src="Model/Book.js"></script>
     <script src="Model/Modal.js"></script>
+    <script src="Model/BookModals.js"></script>
     <script src="View/home.js"></script>
     <script src="js/setupCommonTemplates.js"></script>
     <script>
@@ -21,7 +22,7 @@
     <main>
         <header class="flex flex-horizontal">
             <h1>Books</h1>
-            <button type="button" class="flex-right btn btn-green" onclick="ShowModal(true)">Add new...</button>
+            <button type="button" class="flex-right btn btn-green" onclick="OpenAddBookModal()">Add new...</button>
         </header>
         <table id="books">
             <thead>
@@ -108,8 +109,14 @@
     <script type="text/javascript">
         document.getElementsByClassName("modal")[0].style.display = "none";
 
-        // Test
-        let modal = new Modal("Some title", "", 2);
+        function OpenAddBookModal()
+        {
+            new AddBookModal();
+        }
+
+        function OpenDefaultModal(){
+            new Modal("Default", 1);
+        }
     
         // // 'Edit book' modal
         // let editBookModal = document.getElementsByClassName("modal")[1];

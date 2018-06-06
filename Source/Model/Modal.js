@@ -4,16 +4,39 @@ class Modal
     {
         return document.getElementsByClassName('modal')[0];
     }
+    
+    get Title(){
+        return this.title;
+    }
+
+    set Title(value){
+        this.title = value;
+    }
+
+    get Content(){
+        return this.content;
+    }
+
+    set Content(value){
+        this.content = value;
+    }
+
+    get Buttons(){
+        return this.buttons;
+    }
+
+    set Buttons(value){
+        this.buttons = value;
+    }
 
     /**
      * Initializes a new instance of the Modal class.
      * @param {string} title The title of the modal
-     * @param {string} modalContent The content for the modal. In HTML format.
      * @param {number} buttonType The type of buttons. Available types: 1 = OK, 2 = OKCancel.
      * @param {function} okBtnCallback The function to call when pressing the OK button. Argument is optional. Just set to undefined if cancel button callback is needed, but not the OK button callback.
      * @param {function} cancelBtnCallback The function to call when pressing the Cancel button. Argument is optional.
      */
-    constructor(title, modalContent, buttonType, okBtnCallback, cancelBtnCallback) {
+    constructor(title, buttonType, okBtnCallback, cancelBtnCallback) {
         if (!Modal.ModalElement) {
             return;
         }
@@ -22,8 +45,6 @@ class Modal
         this.title = Modal.ModalElement.getElementsByClassName('modal-header')[0].getElementsByTagName('h1')[0];
         this.content = Modal.ModalElement.getElementsByTagName('form')[0];
         this.buttons = Modal.ModalElement.getElementsByTagName('button');
-
-        console.log(this.buttons);
 
         // Show modal
         Modal.ModalElement.style.display = "block";
@@ -74,7 +95,7 @@ class Modal
      */
     DrawModalContent()
     {
-        let newContent = "<h2>Classy</h2>";
+        let newContent = "<h2>Default</h2>";
         this.content.innerHTML = newContent;
     }
 
@@ -83,19 +104,3 @@ class Modal
         Modal.ModalElement.style.display = "none";
     }
 }
-/*
-<div class="modal">
-        <div class="modal-header">
-            <h1>&lt;ModalName&gt;</h1>
-        </div>
-
-        <form>
-            <div class="modal-content">
-
-            </div>
-            
-            <button type="button" name="close">Cancel</button>
-            <button type="button" name="ok">&lt;OkButton&gt;</button>
-        </form>
-    </div>
-*/
